@@ -1,5 +1,5 @@
 """
-URL configuration for ecartbackend project.
+URL configuration for drf_token_authentication_backend project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/5.2/topics/http/urls/
@@ -14,14 +14,13 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+# from xml.etree.ElementInclude import include
 
 from django.contrib import admin
 from django.urls import path, include
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', include('products.urls')),
-    path('api/user/', include('users.urls')),
-    # path('api/', include('cart.urls')),# 👈 Add this
-    path('api/cart/', include('cart.urls')),
+    path('', include('users.views'))
 ]
